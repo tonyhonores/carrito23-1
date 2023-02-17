@@ -185,3 +185,25 @@ function emptyCar(){
 // const userFromLocal = localStorage.getItem('user')
 
 // console.log(JSON.parse(userFromLocal))
+
+// Se ejecuta cuando se presiona el botón "Delete"
+carList.addEventListener("click", deleteProduct);
+// Eliminar un producto del carrito.
+function deleteProduct(e) {
+  if (e.target.classList.contains(deleteProduct)) {
+    const productId = e.target.getAttribute("data-id");
+    carProducts = carProducts.filter((product) => product.id != productId);
+    carElementsHTML();
+  }
+}
+Fernando Rodriguez 7:18 PM
+//* Se ejecuta cuando se presione el botón "Delete"
+carList.addEventListener('click', deleteProduct);
+// Eliminar un producto del carrito
+function deleteProduct(e) {
+    if (e.target.classList.contains('delete__product')) {
+        const productId = e.target.getAttribute('data-id');
+        carProducts = carProducts.filter(product => product.id !== productId);
+        carElementsHTML();
+    }
+}
