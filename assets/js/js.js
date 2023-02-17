@@ -196,7 +196,7 @@ function deleteProduct(e) {
     carElementsHTML();
   }
 }
-Fernando Rodriguez 7:18 PM
+
 //* Se ejecuta cuando se presione el botón "Delete"
 carList.addEventListener('click', deleteProduct);
 // Eliminar un producto del carrito
